@@ -1,0 +1,152 @@
+.city {
+  margin-bottom: 20px;
+  color: #FFFFFF;
+  font-family: Roboto;
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 24px;
+  text-align: left;
+}
+.add_fav {
+  display: flex;
+  align-items: end;
+  gap: 7px;
+  color: #FFFFFF;
+
+  i {
+    font-size: 18px;
+  }
+  span {
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0;
+    line-height: 15px;
+  }
+}
+
+.home_cnt {
+  text-align: center;
+  margin-top: 15px;
+
+  img {
+    height: 84px;
+    width: 80px;
+    margin-bottom: 15px;
+  }
+}
+.deg_div {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  justify-content: center;
+}
+.temp {
+  color: #FFFFFF;
+  font-size: 64px;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 75px;
+  margin-bottom: 15px;
+}
+.measure {
+  height: 30px;
+  width: 56px;
+  border: 1px solid #FFFFFF;
+  border-radius: 2px;
+  display: flex;
+
+  > div {
+    height: 100%;
+    width: 50%;
+    background-color: transparent;
+    text-align: center;
+    line-height: 30px;
+    color: #FFFFFF;
+    font-size: 16px;
+    letter-spacing: 0;
+    cursor: pointer;
+  }
+  > div.active {
+    background-color: #FFFFFF;
+    color: #E32843;
+  }
+}
+
+.temp_txt {
+  color: #FFFFFF;
+  font-size: 22px;
+  letter-spacing: 0;
+  line-height: 25px;
+  text-align: center;
+}
+
+.line {
+  height: 1px;
+  width: 100%;
+  border: 1px solid #FFFFFF;
+  opacity: 0.3;
+  margin-top: 80px;
+  margin-bottom: 50px;
+}
+
+.w_info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  width: 80%;
+  margin: 0 auto 20px auto;
+  overflow: auto;
+}
+.w_info_div {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  min-width: 140px;
+}
+.w_info_label {
+  color: #FFFFFF;
+  font-size: 15px;
+  letter-spacing: 0;
+  line-height: 18px;
+  margin-bottom: 6px;
+}
+.w_info_val {
+  color: #FFFFFF;
+  font-size: 22px;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 25px;
+}
+
+.date_mobile {
+  display: none;
+  opacity: 0.6;
+  color: #FFFFFF;
+  font-size: 13px;
+  letter-spacing: 1.5px;
+  line-height: 15px;
+  text-align: center;
+}
+
+@media only screen and (max-width: 992px) {
+  .w_info {
+    width: 90%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .date_mobile {
+    display: block;
+  }
+  .city {
+    text-align: center;
+  }
+  .add_fav {
+    justify-content: center;
+  }
+  .w_info {
+    width: 95%;
+  }
+}

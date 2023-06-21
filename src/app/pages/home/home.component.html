@@ -1,0 +1,57 @@
+<div class="home_main" *ngIf="weatherData?.current">
+  <h3 class="date_mobile">{{weatherData.current.last_updated | date: 'EEE, d MMM y, h:mm a' }}</h3>
+  <div class="city">{{weatherData.location.name | titlecase}}, {{weatherData.location.region | titlecase}}</div>
+  <div class="add_fav">
+    <i [ngClass]="isLiked ? 'fas fa-heart' : 'far fa-heart'" (click)="toggleLike()"></i>
+    <span>Add to favourite</span>
+  </div>
+  <div class="home_cnt">
+    <img src="{{getImage(weatherData.current.condition.text)}}" />
+    <div class="deg_div">
+      <div class="temp">{{tempcfval === 'c' ? weatherData.current.temp_c : weatherData.current.temp_f}}</div>
+      <div class="measure">
+        <div (click)="tempCF('c')" [ngClass]="{'active': tempcfval === 'c'}">°C</div>
+        <div (click)="tempCF('f')" [ngClass]="{'active': tempcfval === 'f'}">°F</div>
+      </div>
+    </div>
+    <div class="temp_txt">{{weatherData.current.condition.text}}</div>
+  </div>
+  <div class="line"></div>
+  <div class="w_info">
+    <div class="w_info_div">
+      <img src="assets/icon_temperature_info.svg" />
+      <div class="w_info_item">
+        <div class="w_info_label">Min - Max</div>
+        <div class="w_info_val">75° - 90°</div>
+      </div>
+    </div>
+    <div class="w_info_div">
+      <img src="assets/icon_precipitation_info.svg" />
+      <div class="w_info_item">
+        <div class="w_info_label">Precipitation</div>
+        <div class="w_info_val">{{weatherData.current.precip_in | percent}}</div>
+      </div>
+    </div>
+    <div class="w_info_div">
+      <img src="assets/icon_humidity_info.svg" />
+      <div class="w_info_item">
+        <div class="w_info_label">Humidity</div>
+        <div class="w_info_val">{{weatherData.current.humidity}}%</div>
+      </div>
+    </div>
+    <div class="w_info_div">
+      <img src="assets/icon_wind_info.svg" />
+      <div class="w_info_item">
+        <div class="w_info_label">Wind</div>
+        <div class="w_info_val">{{weatherData.current.wind_mph}} mph</div>
+      </div>
+    </div>
+    <div class="w_info_div">
+      <img src="assets/icon_visibility_info.svg" />
+      <div class="w_info_item">
+        <div class="w_info_label">Visibility</div>
+        <div class="w_info_val">{{weatherData.current.vis_miles}} mph</div>
+      </div>
+    </div>
+  </div>
+</div>

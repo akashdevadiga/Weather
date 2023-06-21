@@ -1,0 +1,24 @@
+<div class="responsive-container">
+  <!-- <div class="desktop-view">
+    <mat-tab-group *ngIf="isDesktopView">
+      <mat-tab label="Tab 1"><app-home></app-home></mat-tab>
+      <mat-tab label="Tab 2">Tab 2 Content</mat-tab>
+      <mat-tab label="Tab 3">Tab 3 Content</mat-tab>
+    </mat-tab-group>
+  </div> -->
+
+  <!-- <div class="mobile-view">
+    <mat-drawer-container class="example-container">
+      <mat-drawer mode="side" opened>Drawer content</mat-drawer>
+      <mat-drawer-content>Main content</mat-drawer-content>
+    </mat-drawer-container>    
+  </div> -->
+  <button class="btn" routerLink="/fav">fav</button>
+
+  <button class="btn" (click)="sidenav.open()">sidenav</button>
+  
+  <mat-sidenav #sidenav (keydown.escape)="close('escape')" disableClose>
+    <p><button mat-button (click)="close('toggle button')">Toggle</button></p>
+  </mat-sidenav>
+
+</div>

@@ -1,1 +1,189 @@
 /* You can add global styles to this file, and also import other style files */
+* {
+  font-family: "Roboto", "Helvetica Neue", sans-serif;
+  box-sizing: border-box;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+  // background-image: linear-gradient(
+  //   to right,
+  //   #5d6bd3,
+  //   #826ec7,
+  //   rgba(136, 81, 204, 0.68)
+  // );
+  background: url("./assets/splash_BG.png");;
+  background-size: cover;
+  margin: 0;
+}
+
+i.fas.fa-heart {
+  color: #FFD639;
+}
+
+.no_data {
+  text-align: center;
+  img {
+    margin-top: 30%;
+  }
+  .no_text {
+    color: #FFFFFF;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 0;
+    line-height: 21px;
+    text-align: center;
+    margin-top: 25px;
+  }
+}
+
+// recent and Fav styled
+.fav_header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 10px;
+  padding-right: 10px;
+
+  h4 {
+    margin: 0;
+    color: #FFFFFF;
+    font-size: 13px;
+    letter-spacing: 0;
+    line-height: 15px;
+  }
+  span {
+    color: #FFFFFF;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0;
+    line-height: 15px;
+    text-align: right;
+    cursor: pointer;
+  }
+}
+
+.fav_main {
+  margin-top: 16px;
+  margin-bottom: 32px;
+}
+
+.fav_item {
+  height: 73px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding-left: 15px;
+  padding-right: 30px;
+  background-color: rgba(255, 255, 255, 0.1);
+  margin-bottom: 1px;
+
+  i {
+    font-size: 18px;
+    color: #FFE539;
+    width: 18px;
+    text-align: right;
+    margin-left: 10px;
+  }
+}
+.fav_item_flex {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+}
+.fav_city {
+  color: #FFFFFF;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 19px;
+  width: 30%;
+}
+
+.fav_temp {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  flex-grow: 1;
+
+  img {
+    width: 32px;
+  }
+}
+.fav_temp_deg {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  h4 {
+    color: #FFFFFF;
+    font-size: 32px;
+    font-weight: 500;
+    letter-spacing: 0;
+    line-height: 38px;
+    margin: 0;
+  }
+  span {
+    color: #FFFFFF;
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: 19px;
+  }
+}
+
+.fav_temp_tx {
+  color: #FFFFFF;
+  font-size: 18px;
+  letter-spacing: 0;
+  line-height: 21px;
+}
+
+.fav_item:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+
+  .fav_city {
+    color: #FFE539;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .fav_item_flex {
+    flex-direction: column;
+    align-items: start;
+    gap: 8px;
+  }
+  .fav_city {
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 0;
+    line-height: 18px;
+  }
+  .fav_temp {
+    gap: 10px;
+    img {
+      height: 23px;
+      width: 22px;
+    }
+    .fav_temp_deg {
+      gap: 2px;
+      h4 {
+        font-size: 18px;
+        font-weight: 500;
+        letter-spacing: 0;
+        line-height: 21px;
+      }
+      span {
+        font-size: 13px;
+        letter-spacing: 0;
+        line-height: 15px;
+      }
+    }
+    .fav_temp_tx {
+      font-size: 14px;
+      letter-spacing: 0;
+      line-height: 16px;
+    }
+  }
+}
+
+//end

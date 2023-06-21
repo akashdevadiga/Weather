@@ -1,0 +1,27 @@
+<div *ngIf="favItems && favItems.length > 0">
+  <div class="fav_header">
+    <h4>{{favItems.length}} City added as favourite</h4>
+    <span (click)="togglePopUp()">Remove All</span>
+  </div>
+  <div class="fav_main">
+    <div class="fav_item" *ngFor="let data of favItems">
+      <div class="fav_item_flex">
+        <div class="fav_city">{{data.location.name}}, {{data.location.region}}</div>
+        <div class="fav_temp">
+          <img src="{{getImage(data.current.condition.text)}}" />
+          <div class="fav_temp_deg">
+            <h4>{{data.current.temp_c}}</h4>
+            <span>°C</span>
+          </div>
+          <div class="fav_temp_tx">{{data.current.condition.text}}</div>
+        </div>
+      </div>
+      <i class="fas fa-heart"></i>
+    </div>
+  </div>
+</div>
+<app-dialog *ngIf="isPopup" (onButton1Click)="togglePopUp()" (onButton2Click)="deleteAll()" [popupTexts]="popupTexts"></app-dialog>
+<div *ngIf="!favItems || favItems.length < 1" class="no_data">
+  <img src="assets/icon_nothing.svg" />
+  <div class="no_text">No Favourites added</div>
+</div>
