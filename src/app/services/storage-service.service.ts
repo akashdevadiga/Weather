@@ -19,3 +19,7 @@ export class StorageServiceService {
     return localStorage.getItem(key);
   }
 }
+
+//Injectable:
+//The @Injectable() decorator defines a class as a service in Angular
+// and allows Angular to inject it into a component as a dependency.

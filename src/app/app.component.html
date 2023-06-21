@@ -5,7 +5,7 @@
     <div class="flex-1"></div>
     <div class="search-container">
       <input type="text" class="search-input" placeholder="Search..." (keyup.enter)="search()" [(ngModel)]="searchTerm" />
-      <span class="search-icon"><i class="fas fa-search"></i></span>
+      <span class="search-icon" (click)="search()"><i class="fas fa-search"></i></span>
     </div>
   </div>
   <div class="tab-container">
