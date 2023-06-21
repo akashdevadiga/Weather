@@ -7,6 +7,10 @@ export const weatherInfo = {
         description: "rainy",
         img: "assets/weather/icon_rain_small.svg"
     },
+    "Mist": {
+        description: "Mist",
+        img: "assets/weather/icon_rain_small.svg"
+    },
     "Clear": {
         description: "Clear Sky",
         img: "assets/weather/icon_clear_night_small.svg"

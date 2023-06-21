@@ -48,6 +48,6 @@ export class RecentComponent {
   }
 
   getImage(tx:any) {
-    return this.weatherInfoConst[tx] ? this.weatherInfoConst[tx].img : this.weatherInfoConst["sunny"].img;
+    return (this.weatherInfoConst[tx] && this.weatherInfoConst[tx].img) ? this.weatherInfoConst[tx].img : this.weatherInfoConst["Sunny"].img;
   }
 }
